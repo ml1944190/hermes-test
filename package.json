@@ -1,0 +1,23 @@
+{
+  "name": "hermes-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "for collection in $(ls ./folder); do newman run \"folder/$collection\" -e Local.postman_environment.json ;done"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ml1944190/hermes-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ml1944190/hermes-test/issues"
+  },
+  "homepage": "https://github.com/ml1944190/hermes-test#readme",
+  "dependencies": {
+    "newman": "^5.1.0",
+    "newman-reporter-teamcity": "^0.1.12"
+  }
+}

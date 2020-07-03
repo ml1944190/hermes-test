@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "00ac4d11-b217-4d9f-b8c8-8de60934eced",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "first",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2ec63629-064c-48bf-a41a-deef87a2b15d",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"have 5 results\", function () {",
+							"    pm.expect(pm.response.json()).to.have.lengthOf(5);",
+							"});",
+							"",
+							"pm.test(\"have 3 results\", function () {",
+							"    pm.expect(pm.response.json()).to.have.lengthOf(3);",
+							"});",
+							"",
+							"pm.test(\"have 5 results\", function () {",
+							"    pm.expect(pm.response.json()).to.have.lengthOf(5);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:76.0) Gecko/20100101 Firefox/76.0"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.5"
+					},
+					{
+						"key": "X-CSRFToken",
+						"value": "E0s8RtI3PZUCPw3gAvQfcuSQCKUVlbwG"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Referer",
+						"value": "https://www.lintcode.com/user/ml1944190"
+					},
+					{
+						"key": "Cookie",
+						"value": "_ga=GA1.2.1679430450.1584505682; language_code=en; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%22235483%22%2C%22first_id%22%3A%221718b78f4e95f8-0fd028eca9f002-4b566a-2073600-1718b78f4ea1ce%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22%E7%9B%B4%E6%8E%A5%E6%B5%81%E9%87%8F%22%2C%22%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC_%E7%9B%B4%E6%8E%A5%E6%89%93%E5%BC%80%22%2C%22%24latest_referrer%22%3A%22%22%7D%2C%22%24device_id%22%3A%22170ebe5f7fa448-057e52e78c01078-4b576b-2073600-170ebe5f7fb48%22%7D; csrftoken=E0s8RtI3PZUCPw3gAvQfcuSQCKUVlbwG; uuid=cc135cca-f6ff-4528-902a-ff429cf6668a; SERVERID=0040b5236e9c0f2d941a455c619741f4|1593361236|1593361198; sessionid=27ck01wbkwgnuj54t1hrmwdome2hi1wh; _gid=GA1.2.1744933769.1593361203; _gat=1"
+					}
+				],
+				"url": {
+					"raw": "https://www.lintcode.com/api/submissions/recent_ac_submissions/?username={{username}}",
+					"protocol": "https",
+					"host": [
+						"www",
+						"lintcode",
+						"com"
+					],
+					"path": [
+						"api",
+						"submissions",
+						"recent_ac_submissions",
+						""
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "{{username}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "3fac80c9-c858-45e9-83d5-ed51056b6dff",
+				"type": "text/javascript",
+				"exec": [
+					"utils = {",
+					"  myFunc: () => \"hello\"",
+					"};"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "d1ac32bf-23e7-4af3-9cee-07e37494cb9f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
